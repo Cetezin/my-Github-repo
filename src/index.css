@@ -92,6 +92,10 @@ button:focus-visible {
   list-style-type: none;
 }
 
+#error{
+  /* height: 10rem; */
+  margin-block: 2rem;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

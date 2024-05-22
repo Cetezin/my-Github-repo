@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import {
-    Heading,
+  Heading,
   Table,
   Thead,
   Tbody,
@@ -29,16 +29,17 @@ function About() {
 
   return (
     <div className="table">
-      <TableContainer color="hsla(160, 100%, 37%, 1)">
+      <TableContainer color="#fff">
         <Table variant="simple">
           <TableCaption color="#fff">{repo.name}</TableCaption>
           <Thead>
             <Tr>
               <Th color="#fff">Property</Th>
-              <Th color='#fff'>Value</Th>
+              <Th color="#fff">Value</Th>
             </Tr>
           </Thead>
-          <Tbody><Tr>
+          <Tbody>
+            <Tr>
               <Td>Language: </Td>
               <Td>{repo.language}</Td>
             </Tr>
@@ -61,7 +62,7 @@ function About() {
               <Td>{repo.forks_count}</Td>
             </Tr>
             <Tr>
-                <Td>Default branch:</Td>
+              <Td>Default branch:</Td>
               <Td>{repo.default_branch}</Td>
             </Tr>
             <Tr>
@@ -92,11 +93,12 @@ function About() {
               <Td>Watchers:</Td>
               <Td>{repo.watchers}</Td>
             </Tr>
-
           </Tfoot>
         </Table>
       </TableContainer>
-      <Link to={'/'} style={{color: "#fff", padding:"10px"}}><button>Go Home</button></Link>
+      <Link to={"/"} style={{ color: "#fff", padding: "10px" }}>
+        <button>Go Home</button>
+      </Link>
     </div>
   );
 }

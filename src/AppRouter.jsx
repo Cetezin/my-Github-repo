@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Error from "./pages/error";
 
 const AppRouter = () => {
   return (
@@ -14,15 +15,10 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         {/* children here are nested routes */}
         <Route path="/repo/:repo_name" element={<About />} />
-        {/* </Route> */}
-        {/* <Route
+        <Route
           path="*"
-          Component={() => (
-            <div>
-              <h1>Error</h1>
-            </div>
-          )}
-        /> */}
+          element={<Error />}
+        />
       </Routes>
     </div>
   );

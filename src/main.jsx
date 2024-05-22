@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
 
 const colors = {
   brand: {
@@ -18,9 +19,11 @@ const theme = extendTheme({ colors });
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ChakraProvider>
+      <HelmetProvider>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </HelmetProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
